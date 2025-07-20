@@ -1,48 +1,59 @@
-import { FiHome, FiCreditCard, FiHeart, FiMessageCircle, FiTrendingUp, FiSettings } from 'react-icons/fi';
+import {
+    FiHome,
+    FiCreditCard,
+    FiHeart,
+    FiMessageCircle,
+    FiTrendingUp,
+    FiSettings,
+    FiLogOut,
+} from 'react-icons/fi';
 
 export default function Sidebar() {
-
     const navItems = [
-        { label: "Dashboard", icon: <FiHome />, active: true },
-        { label: "Ticket", icon: <FiCreditCard /> },
-        { label: "Favorite", icon: <FiHeart /> },
-        { label: "Message", icon: <FiMessageCircle /> },
-        { label: "Transaction", icon: <FiTrendingUp /> },
-        { label: "Setting", icon: <FiSettings /> }
+        { label: 'Dashboard', icon: <FiHome />, active: true },
+        { label: 'Ticket', icon: <FiCreditCard /> },
+        { label: 'Favorite', icon: <FiHeart /> },
+        { label: 'Message', icon: <FiMessageCircle /> },
+        { label: 'Transaction', icon: <FiTrendingUp /> },
+        { label: 'Setting', icon: <FiSettings /> },
     ];
 
-
     return (
-        <aside className="w-56 flex flex-col m-4 ml-10 min-h-screen items-center">
-            <h1 className="text-2xl self-start font-bold p-6 pb-0 pt-12">Travelingo</h1>
-            <nav className="mt-18 mb-2 w-full">
+        <aside className="w-[379px] flex flex-col min-h-screen bg-white shadow-lg">
+            <h1 className="text-2xl font-semibold pt-16 ml-[85px] text-[32px]">Travelingo</h1>
+
+
+            <nav className="flex flex-col items-start mt-10 ml-[85px]">
                 {navItems.map((item) => (
                     <button
                         key={item.label}
-                        className={`flex items-center gap-3 w-46 px-6 py-3 mb-1 ${item.active
-                            ? "bg-green-400 text-green-100 font-bold rounded-lg hover:bg-gray-300 hover:text-green-700"
-                            : "text-gray-400 font-bold"
+                        className={`flex items-center gap-3 w-[215px] h-[67px] px-6 py-3 mb-2 rounded-lg transition-all duration-200 text-[20px]
+                ${item.active
+                                ? 'bg-green-400 text-green-100 font-bold hover:bg-gray-300 hover:text-green-700 text-[20px]'
+                                : 'text-gray-400 font-semibold hover:bg-gray-100 hover:text-green-700'
                             }`}
                     >
                         <span className="text-lg">{item.icon}</span>
                         {item.label}
                     </button>
                 ))}
+
+
+
             </nav>
 
-            <div className="m-6 bg-green-200 p-4 rounded-lg w-54">
-                <div className="flex items-baseline space-x-1">
-                    <p className="font-bold text-lg text-red-700">50%</p>
-                    <p className="font-bold text-lg text-black-700">Discount</p>
-                </div>
-
-                <span className="text-sm block mt-1">Get a discount on certain days and don’t miss it.</span>
+            <div className="mt-8 ml-[35px]">
+                <img
+                    src="/src/assets/discount-card.png"
+                    alt="Discount"
+                    className="w-[265px] h-[265px] object-contain"
+                />
             </div>
-            <button className="m-6 mt-0 text-gray-500 text-sm">Log Out</button>
+
+            <button className="mt-6 ml-[105px] mb-[30px] text-gray-500 text-[20px] font-semibold flex items-center gap-2 hover:text-red-600 transition-colors">
+                <FiLogOut className="text-lg" />
+                Log Out
+            </button>
         </aside>
     );
 }
-
-
-
-
