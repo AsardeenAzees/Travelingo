@@ -1,6 +1,6 @@
 export default function DestinationCard({ title, location, rating, image }) {
     return (
-      <div className="rounded-xl shadow bg-white relative overflow-hidden w-56 h-80">
+      <div className="rounded-[26px] shadow bg-white relative overflow-hidden w-56 h-80">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent">
           <h3 className="text-white font-semibold">{title}</h3>
