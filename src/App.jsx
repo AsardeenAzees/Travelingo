@@ -3,9 +3,9 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
-    <div className="flex bg-[#f7fbfc] min-h-screen font-sans">
+    <div className="flex bg-white min-h-screen font-sans">
       <Sidebar />
-      <main className="flex-1 p-8">
+      <main className="flex-1 mt-[30px]">
         <Dashboard />
       </main>
     </div>

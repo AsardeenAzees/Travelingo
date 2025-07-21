@@ -6,7 +6,7 @@ const destinations = [
   
   export default function BestDestinationList() {
     return (
-      <div className="bg-white p-4 rounded-xl shadow mt-6">
+      <div className="bg-white p-4 rounded-xl shadow h-[456px]">
         <div className="flex justify-between items-center mb-4">
           <span className="font-semibold">Best Destination 🌈</span>
           <button className="px-4 py-1 rounded-lg border text-sm text-gray-500">Filters</button>
