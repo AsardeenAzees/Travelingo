@@ -16,7 +16,7 @@ export default function BestDestinationList() {
         </div>
 
         <button
-          className="flex items-center gap-2 px-4 py-1 rounded-lg border border-gray-200 text-gray-500 text-sm font-semibold bg-white hover:bg-gray-50 transition"
+          className="flex items-center gap-2 px-4 py-1 w-[106px] h-[46px] rounded-[10px] border border-[#E5E5E5] text-[#777777] text-[18px] bg-white hover:bg-gray-50 transition"
         >
           <FiSliders className="text-base" />
           Filters
