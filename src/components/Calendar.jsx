@@ -100,7 +100,7 @@ export default function Calendar() {
   };
 
   return (
-    <div className="p-6 w-full max-w-md mx-auto">
+    <div className="p-4 sm:p-6 w-full max-w-full sm:max-w-md mx-auto">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

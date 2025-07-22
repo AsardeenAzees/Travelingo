@@ -73,12 +73,12 @@ export default function BestDestinationList() {
       {filteredDestinations.map((d, idx) => (
         <div
           key={idx}
-          className="flex items-center py-3 px-2 rounded-xl hover:bg-gray-100 cursor-pointer transition"
+          className="flex flex-col sm:flex-row sm:items-center py-3 px-2 gap-4 sm:gap-6 rounded-xl hover:bg-gray-100 cursor-pointer transition"
         >
           <img
             src={d.image}
             alt={d.name}
-            className="w-[90px] h-[90px] rounded-md mr-3 object-cover"
+            className="w-[90px] h-[90px] rounded-md object-cover"
           />
           <div className="flex-1">
             <div className="font-medium text-[16px]">{d.name}</div>

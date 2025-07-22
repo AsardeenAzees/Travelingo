@@ -29,19 +29,23 @@ const featuredTrips = [
 
 export default function Dashboard() {
   return (
-    <div className="flex mb-10">
-      <div className="flex bg-[#F4F8F7] rounded-[44px] shadow-xl p-8">
+    <div className="flex flex-col lg:flex-row gap-6 mb-10 px-4">
+
+      <div className="flex flex-col flex-1 bg-[#F4F8F7] rounded-[44px] shadow-xl p-4 sm:p-6 lg:p-8 mb-6">
+
         <section className="flex-1">
 
           {/* HEADER AND SEARCH */}
-          <div className="flex items-center  mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
+
             <div>
               <h2 className="font-semibold text-[32px] mb-1">Hello, Jemmy <span role="img" aria-label="wave">👋</span></h2>
               <p className="text-[#5E5E5E] text-[14px] font-semibold">Welcome back and explore the world</p>
             </div>
 
             {/* -- SEARCH BAR -- */}
-            <form className="ml-36 relative w-[282px] h-[59px]">
+            <form className="relative w-full md:w-[282px] h-[50px] md:h-[59px]">
+
               <input
                 type="text"
                 placeholder="Search direction"
@@ -62,7 +66,8 @@ export default function Dashboard() {
             </form>
 
             {/* BELL ICON WITH NOTIFICATION */}
-            <div className="relative ml-4">
+            <div className="relative">
+
               <button
                 className="p-4.5 rounded-full bg-white shadow hover:bg-gray-100 transition w-[59px] h-[59px]"
                 aria-label="Notifications"
@@ -76,14 +81,14 @@ export default function Dashboard() {
           </div>
 
 
-          <div className="flex gap-5 mb-8">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-8">
             {featuredTrips.map((trip, idx) => (
               <DestinationCard key={idx} {...trip} />
             ))}
           </div>
 
-          <div className="grid grid-cols-3 gap-6 w-190 h-[456px]">
-            <div className="col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-2">
               <BestDestinationList />
             </div>
             <div>
@@ -94,7 +99,8 @@ export default function Dashboard() {
 
         </section>
       </div>
-      <aside className="w-full flex flex-col gap-7">
+      <aside className="w-full flex flex-col gap-7 lg:max-w-[300px]">
+
         <ProfileCard />
         <Calendar />
         <Schedule />

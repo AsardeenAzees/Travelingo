@@ -3,7 +3,8 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
-    <div className="flex bg-white min-h-screen font-sans">
+    <div className="flex flex-col lg:flex-row bg-white min-h-screen font-sans">
+
       <Sidebar />
       <main className="flex-1 mt-[30px]">
         <Dashboard />

@@ -1,6 +1,6 @@
 export default function ExploreCard() {
   return (
-    <div className="h-[456px] bg-[#292949] rounded-[26px] p-7 flex flex-col items-center h-[440px] justify-between hover:shadow-md cursor-pointer transition-transform transform hover:-translate-y-1">
+    <div className="h-auto bg-[#292949] rounded-[26px] p-6 flex flex-col items-center justify-between">
       <img
         src="/src/assets/explore-avatar.png"
         alt="Explore"

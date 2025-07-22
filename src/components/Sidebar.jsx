@@ -19,7 +19,8 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="w-[349px] flex flex-col min-h-screen bg-white">
+        <aside className="hidden lg:flex w-full max-w-[349px] flex-col min-h-screen bg-white">
+
             <h1 className="text-2xl font-semibold pt-16 ml-[85px] text-[32px]">Travelingo</h1>
 
 
