@@ -94,7 +94,7 @@ export default function Dashboard() {
 
         </section>
       </div>
-      <aside className="w-[350px] flex flex-col gap-7">
+      <aside className="w-full flex flex-col gap-7">
         <ProfileCard />
         <Calendar />
         <Schedule />
