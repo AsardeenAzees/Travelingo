@@ -40,7 +40,7 @@ export default function Dashboard() {
             </div>
 
             {/* -- SEARCH BAR -- */}
-            <form className="ml-26 relative w-[282px] h-[59px]">
+            <form className="ml-36 relative w-[282px] h-[59px]">
               <input
                 type="text"
                 placeholder="Search direction"
