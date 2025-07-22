@@ -80,7 +80,7 @@ export default function Dashboard() {
           </div>
 
           {/* Featured Trips */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center sm:justify-items-stretch mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center sm:justify-items-stretch mb-8">
             {featuredTrips.map((trip, idx) => (
               <DestinationCard key={idx} {...trip} />
             ))}
@@ -88,9 +88,10 @@ export default function Dashboard() {
 
           {/* Best Destination + Explore */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 lg:w-[522px]">
               <BestDestinationList />
             </div>
+            
             <ExploreCard />
           </div>
 
