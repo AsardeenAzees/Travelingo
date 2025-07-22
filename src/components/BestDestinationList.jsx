@@ -4,7 +4,7 @@ const destinations = [
   { name: "Desert Festival", location: "Gujarat", rating: 4.8, price: 999, image: "/src/assets/forest2.png" },
 ];
 
-import { FiMapPin } from "react-icons/fi";
+import { FiMapPin, FiSliders } from "react-icons/fi";
 
 export default function BestDestinationList() {
   return (
@@ -15,8 +15,14 @@ export default function BestDestinationList() {
           <span className="font-semibold text-[14px] text-[#5E5E5E] mt-1">100 Destination found</span>
         </div>
 
+        <button
+          className="flex items-center gap-2 px-4 py-1 rounded-lg border border-gray-200 text-gray-500 text-sm font-semibold bg-white hover:bg-gray-50 transition"
+        >
+          <FiSliders className="text-base" />
+          Filters
+        </button>
 
-        <button className="px-4 py-1 rounded-lg border text-sm text-gray-500">Filters</button>
+
       </div>
       {destinations.map((d, idx) => (
         <div key={idx} className="flex items-center py-3">
