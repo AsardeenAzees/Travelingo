@@ -20,19 +20,19 @@ export default function BestDestinationList() {
   );
 
   return (
-    <div className="bg-white p-6 rounded-[26px] shadow h-auto">
+    <div className="bg-white p-4 sm:p-6 rounded-[26px] shadow h-auto w-full">
       {/* Header */}
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex flex-col">
-          <span className="font-semibold text-[20px]">Best Destination 🌈</span>
-          <span className="font-semibold text-[14px] text-[#5E5E5E] mt-1">
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-center mb-4 gap-4 text-center sm:text-left">
+        <div className="mx-auto sm:mx-0">
+          <span className="font-semibold text-[20px] block">Best Destination 🌈</span>
+          <span className="font-semibold text-[14px] text-[#5E5E5E] mt-1 block">
             {filteredDestinations.length} Destination found
           </span>
         </div>
 
         <button
           onClick={toggleFilters}
-          className="flex items-center gap-2 px-4 py-1 w-[106px] h-[46px] rounded-[10px] border border-[#E5E5E5] text-[#777777] text-[18px] bg-white hover:bg-gray-50 transition cursor-pointer"
+          className="flex items-center justify-center gap-2 px-4 py-1 w-full sm:w-[106px] h-[46px] rounded-[10px] border border-[#E5E5E5] text-[#777777] text-[18px] bg-white hover:bg-gray-50 transition cursor-pointer"
         >
           <FiSliders className="text-base" />
           Filters
@@ -73,16 +73,16 @@ export default function BestDestinationList() {
       {filteredDestinations.map((d, idx) => (
         <div
           key={idx}
-          className="flex flex-col sm:flex-row sm:items-center py-3 px-2 gap-4 sm:gap-6 rounded-xl hover:bg-gray-100 cursor-pointer transition"
+          className="flex flex-col sm:flex-row sm:items-center py-3 px-2 gap-4 sm:gap-6 rounded-xl hover:bg-gray-100 cursor-pointer transition text-center sm:text-left"
         >
           <img
             src={d.image}
             alt={d.name}
-            className="w-[90px] h-[90px] rounded-md object-cover"
+            className="w-[90px] h-[90px] rounded-md object-cover mx-auto sm:mx-0"
           />
           <div className="flex-1">
             <div className="font-medium text-[16px]">{d.name}</div>
-            <div className="flex items-center gap-6 mt-2 font-semibold text-[12px] text-[#9C9C9C]">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-6 mt-2 font-semibold text-[12px] text-[#9C9C9C]">
               <span className="flex items-center gap-1">
                 <FiMapPin className="text-[#9C9C9C] text-base" />
                 {d.location}
@@ -91,12 +91,13 @@ export default function BestDestinationList() {
             </div>
           </div>
 
-          <div className="text-right">
-            <span className="font-semibold text-black text-[18px]">₹{d.price}</span>
+          <div className="text-center sm:text-right mt-2 sm:mt-0 w-full sm:w-auto">
+            <span className="font-semibold text-black text-[18px] block">₹{d.price}</span>
             <div className="text-gray-400 text-[12px]">/night</div>
           </div>
         </div>
       ))}
     </div>
-  );
+  )
+  
 }
