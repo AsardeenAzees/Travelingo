@@ -81,7 +81,7 @@ export default function Dashboard() {
             ))}
           </div>
 
-          <div className="grid grid-cols-3 gap-6 w-178 h-[440px]">
+          <div className="grid grid-cols-3 gap-6 w-190 h-[456px]">
             <div className="col-span-2">
               <BestDestinationList />
             </div>

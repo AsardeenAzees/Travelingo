@@ -19,7 +19,7 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="w-[379px] flex flex-col min-h-screen bg-white">
+        <aside className="w-[349px] flex flex-col min-h-screen bg-white">
             <h1 className="text-2xl font-semibold pt-16 ml-[85px] text-[32px]">Travelingo</h1>
 
 
@@ -27,9 +27,9 @@ export default function Sidebar() {
                 {navItems.map((item) => (
                     <button
                         key={item.label}
-                        className={`flex items-center gap-3 w-[215px] h-[67px] px-6 py-3 mb-2 rounded-lg transition-all duration-200 text-[20px]
+                        className={`flex items-center gap-3 w-[215px] h-[67px] px-6 py-3 mb-2 rounded-lg transition-all duration-200 text-[20px] cursor-pointer
                 ${item.active
-                                ? 'bg-green-400 text-green-100 font-bold hover:bg-gray-300 hover:text-green-700 text-[20px]'
+                                ? 'bg-green-400 text-green-100 font-bold hover:bg-gray-300 hover:text-green-700 text-[20px] cursor-pointer'
                                 : 'text-gray-400 font-semibold hover:bg-gray-100 hover:text-green-700'
                             }`}
                     >
@@ -50,7 +50,7 @@ export default function Sidebar() {
                 />
             </div>
 
-            <button className="mt-6 ml-[105px] mb-[30px] text-gray-500 text-[20px] font-semibold flex items-center gap-2 hover:text-red-600 transition-colors">
+            <button className="mt-6 ml-[105px] mb-[30px] text-gray-500 text-[20px] font-semibold flex items-center gap-2 hover:text-red-600 transition-colors cursor-pointer">
                 <FiLogOut className="text-lg" />
                 Log Out
             </button>
