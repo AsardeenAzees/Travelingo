@@ -4,7 +4,7 @@ export default function ProfileCard() {
   return (
     <div className="flex items-center gap-2">
       <img
-        className="w-[59px] h-[59px] rounded-full border-2 border-green-400 object-cover mt-4 ml-8"
+        className="w-[59px] h-[59px] rounded-full border-2 border-green-401 object-cover mt-4 ml-8"
         src="/src/assets/user-avatar.png"
         alt="Profile"
       />
