@@ -29,7 +29,7 @@ export default function BestDestinationList() {
           <img src={d.image} alt={d.name} className="w-[90px] h-[90px] rounded-md mr-3 object-cover" />
           <div className="flex-1">
             <div className="font-medium text-[16px]">{d.name}</div>
-            <div className="flex items-center gap-4 mt-2 font-semibold text-[12px] text-[#9C9C9C] text-sm">
+            <div className="flex items-center gap-6 mt-2 font-semibold text-[12px] text-[#9C9C9C] text-sm">
               <span className="flex items-center gap-1">
                 <FiMapPin className="text-[#9C9C9C] text-base" />
                 {d.location}

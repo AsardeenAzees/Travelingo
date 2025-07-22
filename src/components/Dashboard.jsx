@@ -28,7 +28,7 @@ const featuredTrips = [
 
 export default function Dashboard() {
   return (
-    <div className="flex">
+    <div className="flex mb-10">
       <div className="flex bg-[#F4F8F7] rounded-[44px] shadow-xl p-8">
         <section className="flex-1">
 
