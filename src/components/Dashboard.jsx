@@ -3,6 +3,7 @@ import Schedule from "./Schedule";
 import BestDestinationList from "./BestDestinationList";
 import ExploreCard from "./ExploreCard";
 import DestinationCard from "./DestinationCard";
+import ProfileCard from "./ProfileCard"
 import { FiBell } from "react-icons/fi";
 
 const featuredTrips = [
@@ -94,6 +95,7 @@ export default function Dashboard() {
         </section>
       </div>
       <aside className="w-[350px] flex flex-col gap-7">
+        <ProfileCard />
         <Calendar />
         <Schedule />
       </aside>
