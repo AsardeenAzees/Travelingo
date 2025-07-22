@@ -28,7 +28,10 @@ export default function BestDestinationList() {
 
           </div>
 
-          <div className="font-semibold text-green-800 text-sm">₹{d.price}/night</div>
+          <div>
+            <span className="font-semibold text-black text-[18px]">₹{d.price}</span>
+            <span className="text-gray-400 text-[12px]">/night</span>
+          </div>
         </div>
       ))}
     </div>
