@@ -99,7 +99,7 @@ export default function Dashboard() {
       </div>
 
       {/* Sidebar Section */}
-      <aside className="w-full lg:max-w-[25%] flex flex-col gap-6 items-center lg:items-stretch px-2">
+      <aside className="w-full lg:max-w-[28%] flex flex-col gap-6 items-center lg:items-stretch">
         <ProfileCard />
         <Calendar />
         <Schedule />
