@@ -3,7 +3,7 @@ import Schedule from "./Schedule";
 import BestDestinationList from "./BestDestinationList";
 import ExploreCard from "./ExploreCard";
 import DestinationCard from "./DestinationCard";
-import ProfileCard from "./ProfileCard"
+import ProfileCard from "./ProfileCard";
 import { FiBell } from "react-icons/fi";
 
 const featuredTrips = [
@@ -29,23 +29,23 @@ const featuredTrips = [
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 mb-10 px-4">
+    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mb-10 px-4"> {/* 🔧 Make layout stack on mobile */}
+      
+      {/* Main Section */}
+      <div className="w-full lg:max-w-[75%] bg-[#F4F8F7] rounded-[44px] shadow-xl p-4 sm:p-6 lg:p-8"> {/* 🔧 Responsive padding and width */}
+        <section className="w-full">
 
-      <div className="flex flex-col flex-1 bg-[#F4F8F7] rounded-[44px] shadow-xl p-4 sm:p-6 lg:p-8 mb-6">
-
-        <section className="flex-1">
-
-          {/* HEADER AND SEARCH */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
-
-            <div>
-              <h2 className="font-semibold text-[32px] mb-1">Hello, Jemmy <span role="img" aria-label="wave">👋</span></h2>
+          {/* Header + Search */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-4 mb-8"> {/* 🔧 stack and center */}
+            <div className="text-center lg:text-left">
+              <h2 className="font-semibold text-[28px] lg:text-[32px] mb-1">
+                Hello, Jemmy <span role="img" aria-label="wave">👋</span>
+              </h2>
               <p className="text-[#5E5E5E] text-[14px] font-semibold">Welcome back and explore the world</p>
             </div>
 
-            {/* -- SEARCH BAR -- */}
-            <form className="relative w-full md:w-[282px] h-[50px] md:h-[59px]">
-
+            {/* Search Bar */}
+            <form className="relative w-full max-w-xs lg:ml-12 lg:w-[282px] h-[48px]">
               <input
                 type="text"
                 placeholder="Search direction"
@@ -65,14 +65,13 @@ export default function Dashboard() {
               </svg>
             </form>
 
-            {/* BELL ICON WITH NOTIFICATION */}
+            {/* Bell */}
             <div className="relative">
-
               <button
-                className="p-4.5 rounded-full bg-white shadow hover:bg-gray-100 transition w-[59px] h-[59px]"
+                className="p-3 rounded-full bg-white shadow hover:bg-gray-100 transition w-[48px] h-[48px] flex items-center justify-center"
                 aria-label="Notifications"
               >
-                <FiBell className="text-2xl text-[#5E5E5E] w-[24px] h-[24px]" />
+                <FiBell className="text-xl text-[#5E5E5E]" />
               </button>
               <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs font-bold px-1.5 py-0.5 border-2 border-white">
                 3
@@ -80,27 +79,26 @@ export default function Dashboard() {
             </div>
           </div>
 
-
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-8">
+          {/* Featured Trips */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center sm:justify-items-stretch mb-8">
             {featuredTrips.map((trip, idx) => (
               <DestinationCard key={idx} {...trip} />
             ))}
           </div>
 
+          {/* Best Destination + Explore */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
               <BestDestinationList />
             </div>
-            <div>
-              <ExploreCard />
-            </div>
+            <ExploreCard />
           </div>
-
 
         </section>
       </div>
-      <aside className="w-full flex flex-col gap-7 lg:max-w-[300px]">
 
+      {/* Sidebar Section */}
+      <aside className="w-full lg:max-w-[25%] flex flex-col gap-6 items-center lg:items-stretch px-2">
         <ProfileCard />
         <Calendar />
         <Schedule />
