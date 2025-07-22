@@ -3,6 +3,7 @@ import Schedule from "./Schedule";
 import BestDestinationList from "./BestDestinationList";
 import ExploreCard from "./ExploreCard";
 import DestinationCard from "./DestinationCard";
+import { FiBell } from "react-icons/fi";
 
 const featuredTrips = [
   {
@@ -32,14 +33,14 @@ export default function Dashboard() {
         <section className="flex-1">
 
           {/* HEADER AND SEARCH */}
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center  mb-8">
             <div>
               <h2 className="font-semibold text-[32px] mb-1">Hello, Jemmy <span role="img" aria-label="wave">👋</span></h2>
               <p className="text-[#5E5E5E] text-[14px] font-semibold">Welcome back and explore the world</p>
             </div>
 
             {/* -- SEARCH BAR -- */}
-            <form className="relative w-[282px] h-[59px]">
+            <form className="ml-26 relative w-[282px] h-[59px]">
               <input
                 type="text"
                 placeholder="Search direction"
@@ -60,6 +61,19 @@ export default function Dashboard() {
                 <path d="m21 21-4.35-4.35" />
               </svg>
             </form>
+
+            {/* BELL/ALARM ICON WITH NOTIFICATION */}
+            <div className="relative ml-4">
+              <button
+                className="p-4.5 rounded-full bg-white shadow hover:bg-gray-100 transition w-[59px] h-[59px]"
+                aria-label="Notifications"
+              >
+                <FiBell className="text-2xl text-[#5E5E5E] w-[24px] h-[24px]" />
+              </button>
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs font-bold px-1.5 py-0.5 border-2 border-white">
+                3
+              </span>
+            </div>
           </div>
 
 
@@ -70,7 +84,7 @@ export default function Dashboard() {
           </div>
 
           {/* BELOW: Two-column grid for Best Destinations + Explore Card */}
-          <div className="grid grid-cols-3 gap-6 w-178 h-[456px]">
+          <div className="grid grid-cols-3 gap-6 w-178 h-[440px]">
             <div className="col-span-2">
               <BestDestinationList />
             </div>

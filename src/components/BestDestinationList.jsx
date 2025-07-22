@@ -6,7 +6,7 @@ const destinations = [
 
 export default function BestDestinationList() {
   return (
-    <div className="bg-white p-4 rounded-[26px] shadow h-[456px]">
+    <div className="bg-white p-4 rounded-[26px] shadow h-[440px]">
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-col">
           <span className="font-semibold">Best Destination 🌈</span>
