@@ -29,7 +29,7 @@ const featuredTrips = [
 export default function Dashboard() {
   return (
     <div className="flex">
-      <div className="flex bg-[#F4F8F7] rounded-3xl shadow-xl p-8 min-h-[80vh]">
+      <div className="flex bg-[#F4F8F7] rounded-[44px] shadow-xl p-8">
         <section className="flex-1">
 
           {/* HEADER AND SEARCH */}
@@ -46,8 +46,6 @@ export default function Dashboard() {
                 placeholder="Search direction"
                 className="w-full h-full pl-14 pr-4 py-2 rounded-[100px] bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-300"
               />
-
-              {/* Search Icon: you can also use react-icons here */}
               <svg
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
                 width="20"
@@ -62,7 +60,7 @@ export default function Dashboard() {
               </svg>
             </form>
 
-            {/* BELL/ALARM ICON WITH NOTIFICATION */}
+            {/* BELL ICON WITH NOTIFICATION */}
             <div className="relative ml-4">
               <button
                 className="p-4.5 rounded-full bg-white shadow hover:bg-gray-100 transition w-[59px] h-[59px]"
@@ -83,7 +81,6 @@ export default function Dashboard() {
             ))}
           </div>
 
-          {/* BELOW: Two-column grid for Best Destinations + Explore Card */}
           <div className="grid grid-cols-3 gap-6 w-178 h-[440px]">
             <div className="col-span-2">
               <BestDestinationList />

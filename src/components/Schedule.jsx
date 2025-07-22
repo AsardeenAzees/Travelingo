@@ -32,7 +32,7 @@ const trips = [
                 <div className="text-xs text-gray-400">{t.date}</div>
               </div>
               <div className="flex items-center">
-                {/* Fake participant avatars, can use static img or icons */}
+                
                 {[...Array(t.participants).keys()].map(i => (
                   <span key={i} className="w-7 h-7 rounded-full border-2 border-white bg-green-200 inline-block -ml-2"></span>
                 ))}

@@ -5,7 +5,6 @@ export default function ExploreCard() {
         src="/src/assets/explore-avatar.png"
         alt="Explore"
         className="w-[184px] h-[206px] object-contain mb-4"
-        // Replace with your illustrated avatar PNG as shown in the prototype
       />
       <div className="flex-1 flex flex-col items-center">
         <h3 className="text-white font-semibold text-[24px] mb-2 text-center">
