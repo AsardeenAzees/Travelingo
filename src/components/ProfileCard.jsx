@@ -4,7 +4,7 @@ export default function ProfileCard() {
   return (
     <div className="flex items-center gap-2">
       <img
-        className="w-[59px] h-[59px] rounded-full border-2 border-green-400 object-cover mt-4 ml-8"
+        className="w-[59px] h-[59px] rounded-full border-2 border-green-400 object-cover mt-4"
         src="/src/assets/user-avatar.png"
         alt="Profile"
       />
@@ -14,8 +14,8 @@ export default function ProfileCard() {
       </div>
 
       {/* Dropdown with circle */}
-      <div className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#F4F8F7] ml-16">
-        <FiChevronDown className="text-gray-400 text-xl" />
+      <div className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#F4F8F7] ml-auto">
+        <FiChevronDown className="text-gray-400 text-xl " />
       </div>
     </div>
   );
