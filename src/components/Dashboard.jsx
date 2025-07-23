@@ -29,14 +29,32 @@ const featuredTrips = [
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mb-10 px-4"> {/* 🔧 Make layout stack on mobile */}
-      
+    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 mb-10 px-4">
+
+      {/*Mobile Bell Icon */}
+      <div className="absolute top-3 right-4 block lg:hidden z-50">
+        <button
+          className="p-2 rounded-full bg-white shadow hover:bg-gray-100 transition w-[42px] h-[42px] flex items-center justify-center"
+          aria-label="Notifications"
+        >
+          <FiBell className="text-xl text-[#5E5E5E]" />
+        </button>
+        <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs font-bold px-1.5 py-0.5 border-2 border-white">
+          3
+        </span>
+      </div>
+
+      {/*Mobile-only ProfileCard at top */}
+      <div className="block lg:hidden max-w-[75%] mt-10 lg:mt-0">
+        <ProfileCard />
+      </div>
+
       {/* Main Section */}
-      <div className="w-full lg:max-w-[75%] bg-[#F4F8F7] rounded-[44px] shadow-xl p-4 sm:p-6 lg:p-8"> {/* 🔧 Responsive padding and width */}
+      <div className="w-full lg:max-w-[75%] bg-[#F4F8F7] rounded-[44px] shadow-xl p-4 sm:p-6 lg:p-8">
         <section className="w-full">
 
           {/* Header + Search */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-4 mb-8"> {/* 🔧 stack and center */}
+          <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-4 mb-8">
             <div className="text-center lg:text-left">
               <h2 className="font-semibold text-[28px] lg:text-[32px] mb-1">
                 Hello, Jemmy <span role="img" aria-label="wave">👋</span>
@@ -66,7 +84,7 @@ export default function Dashboard() {
             </form>
 
             {/* Bell */}
-            <div className="relative">
+            <div className="relative hidden sm:flex">
               <button
                 className="p-3 rounded-full bg-white shadow hover:bg-gray-100 transition w-[48px] h-[48px] flex items-center justify-center"
                 aria-label="Notifications"
@@ -91,7 +109,7 @@ export default function Dashboard() {
             <div className="lg:col-span-2 lg:w-[522px]">
               <BestDestinationList />
             </div>
-            
+
             <ExploreCard />
           </div>
 
@@ -99,8 +117,10 @@ export default function Dashboard() {
       </div>
 
       {/* Sidebar Section */}
-      <aside className="w-full lg:max-w-[28%] flex flex-col gap-6 items-center lg:items-stretch">
-        <ProfileCard />
+      <aside className="w-full lg:max-w-[25%] flex flex-col gap-6 items-center lg:items-stretch">
+        <div className="hidden sm:flex">
+          <ProfileCard />
+        </div>
         <Calendar />
         <Schedule />
       </aside>

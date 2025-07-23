@@ -20,7 +20,7 @@ export default function Calendar() {
 
   const renderHeader = () => (
     <div className="flex items-center justify-between mb-4">
-      <div className="text-lg font-semibold">
+      <div className="text-[22px] font-semibold">
         {format(currentDate, "MMMM yyyy")}
       </div>
       <div className="flex space-x-2 text-xl text-gray-400">
