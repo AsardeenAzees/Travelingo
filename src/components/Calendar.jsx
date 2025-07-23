@@ -20,9 +20,11 @@ export default function Calendar() {
 
   const renderHeader = () => (
     <div className="flex items-center justify-between mb-4">
-      <div className="text-[22px] font-semibold">
-        {format(currentDate, "MMMM yyyy")}
+      <div className="text-[22px] font-semibold flex gap-2">
+        <span>{format(currentDate, "MMMM")}</span>
+        <span className="text-black text-opacity-75 font-normal">{format(currentDate, "yyyy")}</span>
       </div>
+
       <div className="flex space-x-2 text-xl text-gray-400">
         <button
           onClick={() => setCurrentDate(subMonths(currentDate, 1))}
