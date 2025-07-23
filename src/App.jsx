@@ -1,15 +1,13 @@
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DashboardPage from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="flex flex-col lg:flex-row bg-white min-h-screen font-sans">
-
-      <Sidebar />
-      <main className="flex-1 mt-[30px]">
-        <Dashboard />
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+      </Routes>
+    </Router>
   );
 }
 

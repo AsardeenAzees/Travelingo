@@ -37,7 +37,7 @@ const scheduleList = [
 export default function Schedule() {
   return (
     <div className="pl-2 pr-2 pt-6 pb-6 w-full">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-8">
         <h3 className="text-[22px] font-semibold">My Schedule</h3>
         <div className="flex space-x-1">
           <span className="w-2 h-2 rounded-full bg-gray-300"></span>
@@ -46,7 +46,7 @@ export default function Schedule() {
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-8">
         {scheduleList.map((item, idx) => (
           <div
             key={idx}
@@ -58,8 +58,8 @@ export default function Schedule() {
               className="w-[90px] h-[90px] rounded-[14px] object-cover"
             />
             <div className="flex-1">
-              <div className="font-semibold text-[15px]">{item.title}</div>
-              <div className="flex items-center text-gray-400 text-sm mt-1">
+              <div className="font-semibold text-[16px]">{item.title}</div>
+              <div className="flex items-center text-gray-400 text-[12px] mt-1">
                 <FiCalendar className="mr-1" />
                 {item.date}
               </div>
