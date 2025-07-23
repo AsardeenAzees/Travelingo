@@ -36,7 +36,7 @@ const scheduleList = [
 
 export default function Schedule() {
   return (
-    <div className="p-6 w-full">
+    <div className="pl-2 pr-2 pt-6 pb-6 w-full">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-[22px] font-semibold">My Schedule</h3>
         <div className="flex space-x-1">
